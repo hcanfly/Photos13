@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="Photos13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZa-nk-2ok">
+                                <rect key="frame" x="167.5" y="395" width="79" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="CQ9-j7-cOA"/>
+                                    <constraint firstAttribute="height" constant="40" id="TL6-dI-J1g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="tappedOnboarding:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GLC-Nn-1Z3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FotosCloud" translatesAutoresizingMaskIntoConstraints="NO" id="efM-Q8-8ez">
+                                <rect key="frame" x="102.5" y="160" width="209" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="1Am-Iq-1VW"/>
+                                    <constraint firstAttribute="width" constant="209" id="CqR-2I-FGw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have a great app. Please be a dear and sign up." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FX5-LI-6ol">
+                                <rect key="frame" x="80.5" y="310" width="253" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="253" id="wCT-ND-XgX"/>
+                                    <constraint firstAttribute="height" constant="65" id="wMJ-bn-bVh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dZa-nk-2ok" firstAttribute="centerX" secondItem="FX5-LI-6ol" secondAttribute="centerX" id="22X-Th-6GZ"/>
+                            <constraint firstItem="dZa-nk-2ok" firstAttribute="top" secondItem="FX5-LI-6ol" secondAttribute="bottom" constant="20" id="24J-zA-PmD"/>
+                            <constraint firstItem="dZa-nk-2ok" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BMW-mQ-Mi8"/>
+                            <constraint firstItem="FX5-LI-6ol" firstAttribute="centerX" secondItem="efM-Q8-8ez" secondAttribute="centerX" id="dCN-GX-VZE"/>
+                            <constraint firstItem="efM-Q8-8ez" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hIh-3H-3zx"/>
+                            <constraint firstItem="FX5-LI-6ol" firstAttribute="top" secondItem="efM-Q8-8ez" secondAttribute="bottom" constant="49" id="med-ps-9v5"/>
+                            <constraint firstItem="efM-Q8-8ez" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="116" id="wpW-zk-mH8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+        <!--Create Account View Controller-->
+        <scene sceneID="1BR-Lk-G96">
+            <objects>
+                <viewController storyboardIdentifier="CreateAccountViewController" id="Tid-Yh-OGU" customClass="CreateAccountViewController" customModule="Photos13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a7O-Gl-QVj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FotosCloud" translatesAutoresizingMaskIntoConstraints="NO" id="3zf-Fo-x1L">
+                                <rect key="frame" x="130.5" y="94" width="153" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="lLd-CL-hJ5"/>
+                                    <constraint firstAttribute="height" constant="76" id="pI1-5L-Sce"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Fn8-fx-wlR">
+                                <rect key="frame" x="146" y="241" width="122" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="rk1-7H-fYc"/>
+                                    <constraint firstAttribute="width" constant="122" id="xNl-HT-4mQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
+                                <connections>
+                                    <action selector="userNameChanged:" destination="Tid-Yh-OGU" eventType="editingChanged" id="KGo-Q4-y96"/>
+                                    <outlet property="delegate" destination="Tid-Yh-OGU" id="C7k-n7-uBT"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiO-Qx-cLq">
+                                <rect key="frame" x="146" y="259" width="122" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="YfH-uO-VX9"/>
+                                    <constraint firstAttribute="height" constant="1" id="gUM-z6-JZL"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="OWD-ga-Ni4">
+                                <rect key="frame" x="146" y="283" width="122" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="7ca-Yp-uZv"/>
+                                    <constraint firstAttribute="height" constant="17" id="ctn-LB-gw3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <action selector="passwordChanged:" destination="Tid-Yh-OGU" eventType="editingChanged" id="wnU-Qn-kfg"/>
+                                    <outlet property="delegate" destination="Tid-Yh-OGU" id="JKj-wC-FeW"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBn-wB-IxA">
+                                <rect key="frame" x="146" y="301" width="122" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="wGH-jD-YJi"/>
+                                    <constraint firstAttribute="height" constant="1" id="zgr-Qb-d0x"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-Aw-Auq">
+                                <rect key="frame" x="133" y="377" width="135" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="createAccountTapped:" destination="Tid-Yh-OGU" eventType="touchUpInside" id="kgQ-sf-W0R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yRe-Aw-Auq" firstAttribute="top" secondItem="NBn-wB-IxA" secondAttribute="bottom" constant="65" id="4bl-ll-ERz"/>
+                            <constraint firstItem="yRe-Aw-Auq" firstAttribute="centerX" secondItem="5Tt-f2-Bkr" secondAttribute="centerX" id="6dt-2z-W40"/>
+                            <constraint firstItem="3zf-Fo-x1L" firstAttribute="top" secondItem="5Tt-f2-Bkr" secondAttribute="top" constant="50" id="CGf-H0-Azr"/>
+                            <constraint firstItem="NBn-wB-IxA" firstAttribute="top" secondItem="OWD-ga-Ni4" secondAttribute="bottom" constant="1" id="Fw2-s0-uaU"/>
+                            <constraint firstItem="OWD-ga-Ni4" firstAttribute="centerX" secondItem="5Tt-f2-Bkr" secondAttribute="centerX" id="bki-S1-2BD"/>
+                            <constraint firstItem="WiO-Qx-cLq" firstAttribute="top" secondItem="Fn8-fx-wlR" secondAttribute="bottom" constant="1" id="cEx-yT-4IW"/>
+                            <constraint firstItem="Fn8-fx-wlR" firstAttribute="centerX" secondItem="5Tt-f2-Bkr" secondAttribute="centerX" id="cZc-Vg-05h"/>
+                            <constraint firstItem="OWD-ga-Ni4" firstAttribute="top" secondItem="WiO-Qx-cLq" secondAttribute="bottom" constant="23" id="dVU-PM-NmM"/>
+                            <constraint firstItem="WiO-Qx-cLq" firstAttribute="leading" secondItem="Fn8-fx-wlR" secondAttribute="leading" id="fUc-re-HAK"/>
+                            <constraint firstItem="OWD-ga-Ni4" firstAttribute="centerX" secondItem="5Tt-f2-Bkr" secondAttribute="centerX" id="kIU-cX-BNJ"/>
+                            <constraint firstItem="3zf-Fo-x1L" firstAttribute="centerX" secondItem="5Tt-f2-Bkr" secondAttribute="centerX" id="pOj-8m-ah7"/>
+                            <constraint firstItem="NBn-wB-IxA" firstAttribute="leading" secondItem="OWD-ga-Ni4" secondAttribute="leading" id="tKi-mn-uZ4"/>
+                            <constraint firstItem="Fn8-fx-wlR" firstAttribute="top" secondItem="3zf-Fo-x1L" secondAttribute="bottom" constant="71" id="z5e-nu-Eur"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Tt-f2-Bkr"/>
+                    </view>
+                    <connections>
+                        <outlet property="createAccountButton" destination="yRe-Aw-Auq" id="UdC-eW-vml"/>
+                        <outlet property="passwordTextField" destination="OWD-ga-Ni4" id="ifo-1v-VyZ"/>
+                        <outlet property="userNameTextField" destination="Fn8-fx-wlR" id="X4Y-uE-krS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WLG-Z6-rRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.71014492753625" y="203.57142857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AYU-NO-kvv">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="YxK-2B-43m" customClass="ViewController" customModule="Photos13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VDB-tr-0os">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a6t-Pq-NpV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Fnu-Ih-ud4"/>
+                    </view>
+                    <connections>
+                        <outlet property="dejaView" destination="a6t-Pq-NpV" id="xYv-PV-r5k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RDZ-9J-qpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="811.59420289855075" y="-24.107142857142858"/>
+        </scene>
+        <!--Digest View Controller-->
+        <scene sceneID="vSg-lq-4An">
+            <objects>
+                <viewController storyboardIdentifier="DigestViewController" id="IrC-yy-Kw1" customClass="DigestViewController" customModule="Photos13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bbT-Sv-JKm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pc5-2K-keX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxa-9e-5be" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947" y="318"/>
+        </scene>
+        <!--Digest View Controller-->
+        <scene sceneID="NHU-YQ-yGk">
+            <objects>
+                <collectionViewController storyboardIdentifier="sdfsdfs" id="geS-lp-q5J" customClass="DigestViewController" customModule="Photos13" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DAV-IZ-Dov">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Aq-XR-Qno" customClass="DigestViewFlowLayout" customModule="Photos13" customModuleProvider="target">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DigestViewCell" id="TqX-Rp-14g" customClass="DigestViewCell" customModule="Photos13" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="geS-lp-q5J" id="CP1-96-yEv"/>
+                            <outlet property="delegate" destination="geS-lp-q5J" id="zbf-2W-BzS"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPN-aQ-KXS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314" y="122"/>
+        </scene>
+        <!--Image Page View Controller-->
+        <scene sceneID="JjP-Wy-UmQ">
+            <objects>
+                <pageViewController storyboardIdentifier="ImagePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="RSE-Iq-h9k" customClass="ImagePageViewController" customModule="Photos13" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Yx-fo-7jQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1931" y="245"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="Tqb-Q7-8YI">
+            <objects>
+                <viewController storyboardIdentifier="ImageViewController" id="cp7-Z0-xGK" customClass="ImageViewController" customModule="Photos13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ITf-B0-zU9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaf-hJ-56H">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pB5-a5-j3k">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="cp7-Z0-xGK" id="eeV-bi-7TR"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JJK-im-PTn"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="pB5-a5-j3k" id="3YR-RO-njQ"/>
+                        <outlet property="scrollView" destination="eaf-hJ-56H" id="WfD-Yv-ONA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTL-zE-lPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2524.6376811594205" y="223.66071428571428"/>
+        </scene>
+        <!--Photos Collection View Controller-->
+        <scene sceneID="W0b-dy-gec">
+            <objects>
+                <viewController storyboardIdentifier="PhotosCollectionViewController" id="nDG-CI-3tv" customClass="PhotosCollectionViewController" customModule="Photos13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Y9-aC-Tec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xne-x3-3U0">
+                                <rect key="frame" x="0.0" y="44" width="408" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mdg-yh-yGu">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotosCollectionViewCell" id="NWL-W7-ma3" customClass="PhotosCollectionViewCell" customModule="Photos13" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="skb-KO-oQp" firstAttribute="trailing" secondItem="xne-x3-3U0" secondAttribute="trailing" constant="6" id="5SF-A8-T0c"/>
+                            <constraint firstItem="xne-x3-3U0" firstAttribute="leading" secondItem="skb-KO-oQp" secondAttribute="leading" id="5eu-f0-Ikz"/>
+                            <constraint firstItem="skb-KO-oQp" firstAttribute="bottom" secondItem="xne-x3-3U0" secondAttribute="bottom" id="R50-59-Zam"/>
+                            <constraint firstItem="xne-x3-3U0" firstAttribute="top" secondItem="skb-KO-oQp" secondAttribute="top" id="bFO-gk-eXs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="skb-KO-oQp"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="xne-x3-3U0" id="HU2-pN-xwW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4L-fn-vhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350.7246376811595" y="-236.38392857142856"/>
+        </scene>
+        <!--Deja View Controller-->
+        <scene sceneID="koj-iJ-APg">
+            <objects>
+                <collectionViewController storyboardIdentifier="DejaViewController" id="bMf-dl-rRJ" customClass="DejaViewController" customModule="Photos13" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Cmq-hW-2Z7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zqv-4C-1Fa">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DejaViewCell" id="LxY-Tc-NmG" customClass="DejaViewCell" customModule="Photos13" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="bMf-dl-rRJ" id="Jvw-CE-jnE"/>
+                            <outlet property="delegate" destination="bMf-dl-rRJ" id="jtE-qV-ddH"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfV-gy-NiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727" y="-144"/>
+        </scene>
+        <!--Photos Group Collection View Controller-->
+        <scene sceneID="oe6-Pd-Nb2">
+            <objects>
+                <collectionViewController storyboardIdentifier="PhotosGroupCollectionViewController" id="CgR-Ea-Wnp" customClass="PhotosGroupCollectionViewController" customModule="Photos13" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="k5L-gp-QUE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F3y-oY-POj">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="h6S-wC-hpo" customClass="UICollectionViewcell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="CgR-Ea-Wnp" id="fC9-yh-zGI"/>
+                            <outlet property="delegate" destination="CgR-Ea-Wnp" id="HpE-c7-rZn"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHQ-ss-GOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2117" y="-233"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FotosCloud" width="418" height="202"/>
+    </resources>
+</document>
