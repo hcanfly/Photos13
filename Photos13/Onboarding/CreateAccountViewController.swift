@@ -26,10 +26,13 @@ final class CreateAccountViewController: UIViewController, UITextFieldDelegate, 
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
         self.view.subviews.forEach { $0.alpha = 0.0 }
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         UIView.animate(withDuration: 1, animations: {
             for view in self.view.subviews {

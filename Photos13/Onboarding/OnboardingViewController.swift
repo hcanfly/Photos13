@@ -17,6 +17,8 @@ final class OnboardingViewController: UIViewController, Storyboarded {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        
         for view in self.view.subviews {
             view.alpha = 1.0
         }

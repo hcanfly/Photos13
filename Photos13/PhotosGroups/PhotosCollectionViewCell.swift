@@ -30,6 +30,8 @@ final class PhotosCollectionViewCell: UICollectionViewCell {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
+        
         self.mediaTypeIconView.frame = self.bounds.insetBy(dx: self.bounds.width * 0.3, dy: self.bounds.height * 0.3)
         self.imageView.frame = self.bounds
         self.imageView.bounds = self.bounds

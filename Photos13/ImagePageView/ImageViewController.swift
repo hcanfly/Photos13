@@ -65,6 +65,7 @@ final class ImageViewController: UIViewController, UIGestureRecognizerDelegate, 
     }
     
     override func viewDidLayoutSubviews() {
+        super .viewDidLayoutSubviews()
         
         self.scrollView.bounds = self.view.bounds
         self.scrollView.frame = self.view.bounds

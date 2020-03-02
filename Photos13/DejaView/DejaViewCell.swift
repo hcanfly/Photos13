@@ -13,6 +13,8 @@ final class DejaViewCell: UICollectionViewCell {
     private let imageView = UIImageView(frame: CGRect.zero)
     
     override func layoutSubviews() {
+        super.layoutSubviews()
+        
         self.imageView.frame = self.bounds
     }
     

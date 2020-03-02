@@ -49,6 +49,8 @@ final class PhotosCollectionViewController: RootViewController, UICollectionView
     }
     
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
         let width = self.collectionView!.frame.width
         let size = width / 5 - 20
         
@@ -59,6 +61,8 @@ final class PhotosCollectionViewController: RootViewController, UICollectionView
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
        self.updateCachedAssets()
     }
 
