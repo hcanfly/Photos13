@@ -45,9 +45,9 @@ final class Model {
             // Tell user to authorize in Settings
         }
             
-        else if (status == PHAuthorizationStatus.notDetermined) {
+        else if status == PHAuthorizationStatus.notDetermined {
             PHPhotoLibrary.requestAuthorization() { status in
-                if (status == PHAuthorizationStatus.authorized) {
+                if status == PHAuthorizationStatus.authorized {
                     DispatchQueue.main.async {
                         self.loadCollection()
                         //send a notification that we now have some data. only needed for first time
@@ -57,7 +57,7 @@ final class Model {
                     // Access has been denied. Oh, well ...
                 }
             }
-        } else if (status == PHAuthorizationStatus.restricted) {
+        } else if status == PHAuthorizationStatus.restricted {
             // Restricted access - normally won't happen.
         }
     }

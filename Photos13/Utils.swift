@@ -49,7 +49,7 @@ struct FileUtilities {
 }
 
 
-public enum LyveColors : Int {
+public enum LyveColors: Int {
     case darkScrim
     case whiteScrim
     case lyveScrim
@@ -62,7 +62,7 @@ public enum LyveColors : Int {
     case selectedDarkText
     
     func color() -> UIColor {
-        switch (self) {
+        switch self {
         case .darkScrim:
             return UIColor(red: 38.0/255.0, green: 50.0/255.0, blue: 56.0/255.0, alpha: 0.25)
         case .whiteScrim:
@@ -87,7 +87,7 @@ public enum LyveColors : Int {
     }
 }
 
-public enum LyveFont : Int {
+public enum LyveFont: Int {
     case ultraLight
     case light
     case normal
@@ -97,7 +97,7 @@ public enum LyveFont : Int {
         var name: String
         
         if accessibilityIsBoldTextEnabled {
-            switch (self) {
+            switch self {
             case .ultraLight:
                 name = "HelveticaNeue"
             case .light:
@@ -108,7 +108,7 @@ public enum LyveFont : Int {
                 name = "HelveticaNeue-Bold"
             }
         } else {
-            switch (self) {
+            switch self {
             case .ultraLight:
                 name = "HelveticaNeue-Light"
             case .light:

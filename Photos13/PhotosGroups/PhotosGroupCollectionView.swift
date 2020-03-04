@@ -11,7 +11,7 @@ import Photos
 
 
 
-let PhotosGroupCellReuseIdentifier = "PhotosGroupCollectionViewCell"
+let photosGroupCellReuseIdentifier = "PhotosGroupCollectionViewCell"
 
 final class PhotosGroupCollectionViewController: UICollectionViewController, Storyboarded {
     
@@ -28,7 +28,7 @@ final class PhotosGroupCollectionViewController: UICollectionViewController, Sto
         
         self.view.backgroundColor = backgroundColor
         
-        self.collectionView!.register(PhotosGroupCollectionViewCell.self, forCellWithReuseIdentifier: PhotosGroupCellReuseIdentifier)
+        self.collectionView!.register(PhotosGroupCollectionViewCell.self, forCellWithReuseIdentifier: photosGroupCellReuseIdentifier)
         self.flowLayout = UICollectionViewFlowLayout()
         self.collectionView!.collectionViewLayout = self.flowLayout
         self.collectionView!.backgroundColor = backgroundColor
@@ -73,15 +73,13 @@ extension PhotosGroupCollectionViewController {
 extension PhotosGroupCollectionViewController  {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotosGroupCellReuseIdentifier, for: indexPath as IndexPath) as! PhotosGroupCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photosGroupCellReuseIdentifier, for: indexPath as IndexPath) as! PhotosGroupCollectionViewCell
         
         let asset = self.assets[indexPath.row]
         let options = PHImageRequestOptions()
         options.isSynchronous = true
-        self.imageManager.requestImage(for: asset, targetSize: self.assetGridSize, contentMode: .aspectFit, options: options) {
-            (image: UIImage?, info: [AnyHashable : Any]?) -> Void in
-            
-            cell.setImage(image: image)
+        self.imageManager.requestImage(for: asset, targetSize: self.assetGridSize, contentMode: .aspectFit, options: options) { (image: UIImage?, _) -> Void in
+                cell.setImage(image: image)
         }
         
         return cell

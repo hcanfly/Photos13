@@ -38,7 +38,7 @@ final class CreateAccountViewController: UIViewController, UITextFieldDelegate, 
             for view in self.view.subviews {
                 view.alpha = 1.0
             }
-        }, completion: { (finished: Bool) -> Void in
+        }, completion: { _ in
             self.userNameTextField.becomeFirstResponder()
         })
     }
@@ -76,7 +76,7 @@ final class CreateAccountViewController: UIViewController, UITextFieldDelegate, 
         return self.password.count > 4
     }
     
-    //MARK: - UITextFieldDelegate
+    // MARK: - UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let nextTag = textField.tag + 1
         

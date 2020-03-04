@@ -15,7 +15,7 @@ private extension Selector {
     static let doScroll = #selector(DejaViewController.doScroll)
 }
 
-let DejaViewReuseIdentifier = "DejaViewCell"
+let dejaViewReuseIdentifier = "DejaViewCell"
 
 final class DejaViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, Storyboarded {
 
@@ -26,7 +26,6 @@ final class DejaViewController: UICollectionViewController, UICollectionViewDele
     private var imageManager = PHImageManager()
     private var imageAssets = [PHAsset]()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -40,15 +39,15 @@ final class DejaViewController: UICollectionViewController, UICollectionViewDele
     }
     
     private func buildDejaVuData() {
-        for x in 0..<Model.sharedInstance.assetCollection!.count {
-            if let modifiedDate = Model.sharedInstance.assetCollection![x].modificationDate {
-                //FIXME   use this test in real world when there are plenty of photos
-                //        simulator doesn't necessarily have enough photos in the current month
+        for index in 0..<Model.sharedInstance.assetCollection!.count {
+            if let modifiedDate = Model.sharedInstance.assetCollection![index].modificationDate {
+                //      use this test in real world when there are plenty of photos
+                //      simulator doesn't necessarily have enough photos in the current month
                 //if datesAreSameMonth(firstDate: modifiedDate, secondDate: Date()) {
-                    self.imageAssets.append(Model.sharedInstance.assetCollection![x])
+                    self.imageAssets.append(Model.sharedInstance.assetCollection![index])
                 //}
             }
-            if self.imageAssets.count > 15 {  //FIXME! arbitrary limit that looks good. don't want too many
+            if self.imageAssets.count > 15 {  // arbitrary limit that looks good. don't want too many
                 break
             }
         }
@@ -134,14 +133,13 @@ extension DejaViewController {
 extension DejaViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DejaViewReuseIdentifier, for: indexPath as IndexPath) as! DejaViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: dejaViewReuseIdentifier, for: indexPath as IndexPath) as! DejaViewCell
         
         let asset = self.imageAssets[indexPath.row]
         let options = PHImageRequestOptions()
         options.isSynchronous = true
         
-        self.imageManager.requestImage(for: asset, targetSize: CGSize(width: cell.frame.width, height: cell.frame.height), contentMode: .aspectFit, options: options) {
-            (image: UIImage?, info: [AnyHashable : Any]?) -> Void in
+        self.imageManager.requestImage(for: asset, targetSize: CGSize(width: cell.frame.width, height: cell.frame.height), contentMode: .aspectFit, options: options) { (image: UIImage?, _) -> Void in
             
             cell.setImage(image: image)
         }

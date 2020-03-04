@@ -94,13 +94,11 @@ extension PhotosCollectionViewController: UICollectionViewDelegate {
             let size = self.assetGridThumbnailSize.width
             let options = PHImageRequestOptions()
             options.isSynchronous = true
-            self.cachingImageManager!.requestImage(for: asset, targetSize: CGSize(width: size, height: size), contentMode: PHImageContentMode.aspectFill, options: options) {
-                (image: UIImage?, info: [AnyHashable : Any]?) -> Void in
-                
-                if cell.assetIdentifier == asset.localIdentifier {
-                    cell.setImage(image: image)
-                    cell.setMediaType(mediaType: asset.mediaType)
-                }
+            self.cachingImageManager!.requestImage(for: asset, targetSize: CGSize(width: size, height: size), contentMode: PHImageContentMode.aspectFill, options: options) { (image: UIImage?, _) -> Void in
+                    if cell.assetIdentifier == asset.localIdentifier {
+                        cell.setImage(image: image)
+                        cell.setMediaType(mediaType: asset.mediaType)
+                    }
             }
         }
         
@@ -142,18 +140,14 @@ extension PhotosCollectionViewController {
             var addedIndexPaths = [NSIndexPath]()
             var removedIndexPaths = [NSIndexPath]()
             
-            self.computeDifferenceBetweenRect(oldRect: self.previousPreheatRect, andRect: preheatRect, removedHandler: {
-                removedRect -> Void in
-                
-                if let indexPaths = self.collectionView!.aapl_indexPathsForElementsInRect(rect: removedRect) {
-                    removedIndexPaths += indexPaths
+            self.computeDifferenceBetweenRect(oldRect: self.previousPreheatRect, andRect: preheatRect, removedHandler: { removedRect -> Void in
+                    if let indexPaths = self.collectionView!.aapl_indexPathsForElementsInRect(rect: removedRect) {
+                        removedIndexPaths += indexPaths
                 }
-            }, addedHandler: {
-                addedRect -> Void in
-                
-                if let indexPaths = self.collectionView!.aapl_indexPathsForElementsInRect(rect: addedRect) {
-                    addedIndexPaths += indexPaths
-                }
+            }, addedHandler: { addedRect -> Void in
+                    if let indexPaths = self.collectionView!.aapl_indexPathsForElementsInRect(rect: addedRect) {
+                        addedIndexPaths += indexPaths
+                    }
             })
             
             // Update the assets the PHCachingImageManager is caching.
@@ -170,7 +164,7 @@ extension PhotosCollectionViewController {
         }
     }
     
-    private func computeDifferenceBetweenRect(oldRect: CGRect, andRect newRect:(CGRect), removedHandler: (CGRect) -> Void, addedHandler: (CGRect) -> Void) {
+    private func computeDifferenceBetweenRect(oldRect: CGRect, andRect newRect: (CGRect), removedHandler: (CGRect) -> Void, addedHandler: (CGRect) -> Void) {
         if newRect.intersects(oldRect) {
             let oldMaxY = oldRect.maxY
             let oldMinY = oldRect.minY

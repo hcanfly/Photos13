@@ -11,17 +11,17 @@ import UIKit
 final class DejaViewCell: UICollectionViewCell {
 
     private let imageView = UIImageView(frame: CGRect.zero)
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+
         self.imageView.frame = self.bounds
     }
-    
+
     func setImage(image: UIImage?) {
         self.imageView.image = image
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         

@@ -41,7 +41,7 @@ final class ImagePageViewController: UIPageViewController, Storyboarded {
     }
 }
 
-//MARK: - UIPageViewControllerDataSource
+// MARK: - UIPageViewControllerDataSource
 extension ImagePageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {

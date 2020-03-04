@@ -17,11 +17,11 @@ struct Section: Decodable, Hashable {
 }
 
 enum SectionType: Int, Decodable {
-    case TwoByThree
-    case ThreeByTwo
-    case ThreeOverTwo
-    case TwoOverThree
-    case Scroller
+    case twoByThree
+    case threeByTwo
+    case threeOverTwo
+    case twoOverThree
+    case scroller
 }
 
 
@@ -51,19 +51,18 @@ final class DigestViewController: UIViewController, Storyboarded {
 extension DigestViewController {
     
     private func createLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewCompositionalLayout {
-            (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, _) in
 
             switch self.sections[sectionIndex].type {
-            case SectionType.ThreeOverTwo:
+            case SectionType.threeOverTwo:
                 return self.createThreeOverTwoSection()
-            case SectionType.TwoOverThree:
+            case SectionType.twoOverThree:
                 return self.createTwoOverThreeSection()
-            case SectionType.ThreeByTwo:
+            case SectionType.threeByTwo:
                 return self.createThreeByTwoSection()
-            case SectionType.TwoByThree:
+            case SectionType.twoByThree:
                 return self.createTwoByThreeSection()
-            case SectionType.Scroller:
+            case SectionType.scroller:
                 return self.createScrollingSection()
             }
 
@@ -212,8 +211,7 @@ extension DigestViewController: UICollectionViewDelegate {
     
     private func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource
-            <Section, Int>(collectionView: collectionView) {
-                (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
+            <Section, Int>(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
 
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DigestViewCell.reuseIdentifier,
                 for: indexPath) as? DigestViewCell else { fatalError("Cannot create new cell") }
@@ -224,10 +222,8 @@ extension DigestViewController: UICollectionViewDelegate {
             let options = PHImageRequestOptions()
             options.isSynchronous = true
             
-            self.imageManager.requestImage(for: asset, targetSize: CGSize(width: cell.frame.width, height: cell.frame.height), contentMode: .aspectFit, options: options) {
-                    (image: UIImage?, info: [AnyHashable : Any]?) -> Void in
-                
-                    cell.setImage(image)
+            self.imageManager.requestImage(for: asset, targetSize: CGSize(width: cell.frame.width, height: cell.frame.height), contentMode: .aspectFit, options: options) { (image: UIImage?, _) -> Void in
+                        cell.setImage(image)
             }
 
             return cell
@@ -249,19 +245,19 @@ extension DigestViewController: UICollectionViewDelegate {
         }
         
         if sectionRanges.count > 0 {
-            self.sections.append(Section(id: 0, type: SectionType.TwoByThree, items: Array(sectionRanges[0])))
+            self.sections.append(Section(id: 0, type: SectionType.twoByThree, items: Array(sectionRanges[0])))
         }
         if sectionRanges.count > 1 {
-            self.sections.append(Section(id: 1, type: SectionType.TwoOverThree, items: Array(sectionRanges[1])))
+            self.sections.append(Section(id: 1, type: SectionType.twoOverThree, items: Array(sectionRanges[1])))
         }
         if sectionRanges.count > 2 {
-            self.sections.append(Section(id: 4, type: SectionType.Scroller, items: Array(sectionRanges[2])))
+            self.sections.append(Section(id: 4, type: SectionType.scroller, items: Array(sectionRanges[2])))
         }
         if sectionRanges.count > 3 {
-            self.sections.append(Section(id: 2, type: SectionType.ThreeByTwo, items: Array(sectionRanges[3])))
+            self.sections.append(Section(id: 2, type: SectionType.threeByTwo, items: Array(sectionRanges[3])))
         }
         if sectionRanges.count > 4 {
-            self.sections.append(Section(id: 3, type: SectionType.ThreeOverTwo, items: Array(sectionRanges[4])))
+            self.sections.append(Section(id: 3, type: SectionType.threeOverTwo, items: Array(sectionRanges[4])))
         }
 
         var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()

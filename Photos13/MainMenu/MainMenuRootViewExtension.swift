@@ -51,12 +51,12 @@ extension RootViewController {
     func setViewId(_ viewId: ViewId) {
 
         switch viewId {
-            case .digest:
-                self.coordinator?.menuDidSelectContentPage()
-            case .photos:
-                self.coordinator?.menuDidSelectPhotosPage()
-            case .settings:
-                break
+        case .digest:
+            self.coordinator?.menuDidSelectContentPage()
+        case .photos:
+            self.coordinator?.menuDidSelectPhotosPage()
+        case .settings:
+            break
         }
     }
     

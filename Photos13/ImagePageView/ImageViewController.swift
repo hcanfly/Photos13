@@ -56,11 +56,9 @@ final class ImageViewController: UIViewController, UIGestureRecognizerDelegate, 
                 
         let options = PHImageRequestOptions()
         options.isSynchronous = true
-        self.imageManager.requestImage(for: asset, targetSize: CGSize(width: self.imageView.bounds.width * 2.0,height: self.imageView.bounds.height * 2.0), contentMode: .aspectFit, options: options) {
-            (image: UIImage?, info: [AnyHashable : Any]?) -> Void in
-            
-            self.imageView.image = image
-            self.setZoomAndScale()
+        self.imageManager.requestImage(for: asset, targetSize: CGSize(width: self.imageView.bounds.width * 2.0, height: self.imageView.bounds.height * 2.0), contentMode: .aspectFit, options: options) { (image: UIImage?, _) -> Void in
+                self.imageView.image = image
+                self.setZoomAndScale()
        }
     }
     
@@ -94,7 +92,7 @@ final class ImageViewController: UIViewController, UIGestureRecognizerDelegate, 
     }
     
     
-    //MARK: - gesture recognizer
+    // MARK: - gesture recognizer
     @objc func scrollViewDoubleTapped(_ recognizer: UITapGestureRecognizer) {
 
         if self.scrollView.zoomScale == 1 {
@@ -119,7 +117,7 @@ final class ImageViewController: UIViewController, UIGestureRecognizerDelegate, 
         return zoomRect
     }
     
-    //MARK: - UIScrollViewDelegate
+    // MARK: - UIScrollViewDelegate
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.imageView

@@ -23,7 +23,7 @@ class RootViewController: UIViewController, MainMenuViewDelegate {
         super.viewDidLoad()
 
         if self.mainMenuButton == nil {
-            self.mainMenuButton = UIBarButtonItem(image: UIImage(named:"ic_menu"), style: .plain, target: self, action: Action.tappedMain)
+            self.mainMenuButton = UIBarButtonItem(image: UIImage(named: "ic_menu"), style: .plain, target: self, action: Action.tappedMain)
         }
 
         self.navigationItem.setLeftBarButton(self.mainMenuButton, animated: true)

@@ -41,7 +41,7 @@ final class AuthCoordinator: NSObject, Coordinator, UINavigationControllerDelega
         // Navigated back from signup page to onboarding page
     }
 
-    //MARK: onboarding controller callback
+    // MARK: onboarding controller callback
     func didTapSignup(onBoardingVC: OnboardingViewController) {
         let createAccount = CreateAccountViewController.instantiate()
         createAccount.coordinator = self
@@ -49,7 +49,7 @@ final class AuthCoordinator: NSObject, Coordinator, UINavigationControllerDelega
         self.navigationController.pushViewController(createAccount, animated: false)
     }
     
-    //MARK: create account controller callback
+    // MARK: create account controller callback
     func didTapCreateAccount(userName: String, password: String, on createAccountController: CreateAccountViewController) {
         if validSignup(userName: userName, password: password) {
             self.coordinator?.didAuthenticate(coordinator: self)

@@ -32,5 +32,3 @@ extension Storyboarded where Self: UIViewController {
         return storyboard.instantiateViewController(withIdentifier: className) as! Self
     }
 }
-
-

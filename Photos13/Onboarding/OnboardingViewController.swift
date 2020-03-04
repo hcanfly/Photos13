@@ -31,7 +31,7 @@ final class OnboardingViewController: UIViewController, Storyboarded {
     @IBAction func tappedOnboarding(_ sender: Any) {
         UIView.animate(withDuration: 1, animations: {
             self.view.subviews.forEach { $0.alpha = 0.1 }
-        }, completion: { (finished: Bool) -> Void in
+        }, completion: { _ in
             self.coordinator?.didTapSignup(onBoardingVC: self)
         })
     }

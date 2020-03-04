@@ -188,7 +188,7 @@ final class MainMenuViewController: UIViewController, UITableViewDataSource, UIT
 
         coordinator.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) -> Void in
             self.updateLayouts()
-            }) { (UIViewControllerTransitionCoordinatorContext) -> Void in
+            }) { _ in
         }
     }
 
@@ -210,7 +210,7 @@ final class MainMenuViewController: UIViewController, UITableViewDataSource, UIT
         let pt = gestureRecognizer.translation(in: self.menuView!)
 
         if gestureRecognizer.state == UIGestureRecognizer.State.began {
-            self.panStartPt = pt;
+            self.panStartPt = pt
             panBegin()
         } else if gestureRecognizer.state == UIGestureRecognizer.State.changed {
             panWithOffset(CGPoint(x: pt.x - self.panStartPt!.x, y: pt.y - self.panStartPt!.y))
@@ -225,7 +225,7 @@ final class MainMenuViewController: UIViewController, UITableViewDataSource, UIT
         }
 
         self.isPanning = true
-        self.panOriginPt = self.menuView!.frame.origin;
+        self.panOriginPt = self.menuView!.frame.origin
     }
 
     func panWithOffset(_ offset: CGPoint) {
@@ -262,7 +262,7 @@ final class MainMenuViewController: UIViewController, UITableViewDataSource, UIT
         for menuItem in self.menuItems {
             if menuItem.viewId == self.viewId {
                 self.tableView!.selectRow(at: IndexPath(row: row, section: 0), animated: false, scrollPosition: UITableView.ScrollPosition.top)
-                break;
+                break
             }
             row += 1
         }
@@ -355,7 +355,7 @@ extension MainMenuViewController {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let menuItem = self.menuItems[indexPath.row]
 
-        var height: CGFloat;
+        var height: CGFloat
         if menuItem.height == -1 {
             switch menuItem.style {
             case MainMenuItemStyle.plain:
