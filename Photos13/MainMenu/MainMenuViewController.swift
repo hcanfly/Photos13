@@ -13,7 +13,7 @@ let mainMenuFooterHeight: CGFloat = 64.0
 let menuSelectionColor = UIColor(hex: 0xe7f7ff)
 
 
-protocol MainMenuViewDelegate: class {
+protocol MainMenuViewDelegate: AnyObject {
     var mainMenuViewController: MainMenuViewController? { get set }
     var viewId: ViewId { get set }
     
