@@ -12,4 +12,4 @@ In the screenshot below the top row is the view that scrolls horizontally using 
 
 ## License
 
-Photos13 is licensed under the MIT License. See the LICENSE file for more information, but basically this is sample code and you can do whatever you want with it.
+Photos13 is licensed under the unlicense. See the LICENSE file for more information, but basically this is sample code and you can do whatever you want with it.
