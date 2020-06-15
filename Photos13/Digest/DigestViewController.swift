@@ -131,66 +131,66 @@ extension DigestViewController {
     
     private func createThreeByTwoSection() -> NSCollectionLayoutSection {
         let leadingItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.3333))
-         let leadingItem = NSCollectionLayoutItem(layoutSize: leadingItemSize)
-         let leadingGroup = NSCollectionLayoutGroup.vertical(
+        let leadingItem = NSCollectionLayoutItem(layoutSize: leadingItemSize)
+        let leadingGroup = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                heightDimension: .fractionalHeight(1.0)),
-             subitem: leadingItem, count: 3)
+            subitem: leadingItem, count: 3)
 
         let trailingItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5))
-         let trailingItem = NSCollectionLayoutItem(layoutSize: trailingItemSize)
-         let trailingGroup = NSCollectionLayoutGroup.vertical(
+        let trailingItem = NSCollectionLayoutItem(layoutSize: trailingItemSize)
+        let trailingGroup = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                heightDimension: .fractionalHeight(1.0)),
-             subitem: trailingItem, count: 2)
+            subitem: trailingItem, count: 2)
 
-         let nestedGroup = NSCollectionLayoutGroup.horizontal(
+        let nestedGroup = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: .fractionalHeight(0.6)),
-             subitems: [leadingGroup, trailingGroup])
-         
-         let layoutSection = NSCollectionLayoutSection(group: nestedGroup)
-         layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
-         return layoutSection
+            subitems: [leadingGroup, trailingGroup])
+
+        let layoutSection = NSCollectionLayoutSection(group: nestedGroup)
+        layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
+        return layoutSection
      }
     
     private func createTwoByThreeSection() -> NSCollectionLayoutSection {
         let leadingItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5))
-         let leadingItem = NSCollectionLayoutItem(layoutSize: leadingItemSize)
-         let leadingGroup = NSCollectionLayoutGroup.vertical(
+        let leadingItem = NSCollectionLayoutItem(layoutSize: leadingItemSize)
+        let leadingGroup = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                heightDimension: .fractionalHeight(1.0)),
-             subitem: leadingItem, count: 2)
+            subitem: leadingItem, count: 2)
 
         let trailingItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.3333))
-         let trailingItem = NSCollectionLayoutItem(layoutSize: trailingItemSize)
-         let trailingGroup = NSCollectionLayoutGroup.vertical(
+        let trailingItem = NSCollectionLayoutItem(layoutSize: trailingItemSize)
+        let trailingGroup = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                heightDimension: .fractionalHeight(1.0)),
-             subitem: trailingItem, count: 3)
+            subitem: trailingItem, count: 3)
 
-         let nestedGroup = NSCollectionLayoutGroup.horizontal(
+        let nestedGroup = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: .fractionalHeight(0.6)),
-             subitems: [leadingGroup, trailingGroup])
-         
-         let layoutSection = NSCollectionLayoutSection(group: nestedGroup)
-         layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
-         return layoutSection
+            subitems: [leadingGroup, trailingGroup])
+
+        let layoutSection = NSCollectionLayoutSection(group: nestedGroup)
+        layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
+        return layoutSection
      }
     
     private func createScrollingSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
 
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-        layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5)
+        layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 18, bottom: 0, trailing: 18)
 
-        let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93), heightDimension: .fractionalHeight(0.4))
+        let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5))
         let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: layoutGroupSize, subitems: [layoutItem])
 
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
-        layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
-        layoutSection.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+        //layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
+        layoutSection.orthogonalScrollingBehavior = .paging //.continuousGroupLeadingBoundary
         return layoutSection
     }
     

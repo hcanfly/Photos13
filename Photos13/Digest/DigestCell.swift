@@ -48,8 +48,8 @@ final class DigestViewCell: UICollectionViewCell {
             self.imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
         
-        self.layer.borderColor = UIColor.systemRed.cgColor
-        self.layer.borderWidth = 0.5
+        //self.layer.borderColor = UIColor.systemBlue.cgColor
+        //self.layer.borderWidth = 1
         //self.layer.cornerRadius = 5
     }
     
