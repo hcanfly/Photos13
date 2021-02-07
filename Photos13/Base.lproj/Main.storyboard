@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZa-nk-2ok">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZa-nk-2ok">
                                 <rect key="frame" x="167.5" y="395" width="79" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="79" id="CQ9-j7-cOA"/>
@@ -45,6 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dZa-nk-2ok" firstAttribute="centerX" secondItem="FX5-LI-6ol" secondAttribute="centerX" id="22X-Th-6GZ"/>
@@ -55,7 +58,6 @@
                             <constraint firstItem="FX5-LI-6ol" firstAttribute="top" secondItem="efM-Q8-8ez" secondAttribute="bottom" constant="49" id="med-ps-9v5"/>
                             <constraint firstItem="efM-Q8-8ez" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="116" id="wpW-zk-mH8"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -119,7 +121,7 @@
                                     <constraint firstAttribute="height" constant="1" id="zgr-Qb-d0x"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-Aw-Auq">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-Aw-Auq">
                                 <rect key="frame" x="133" y="377" width="135" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Create Account"/>
@@ -128,6 +130,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Tt-f2-Bkr"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yRe-Aw-Auq" firstAttribute="top" secondItem="NBn-wB-IxA" secondAttribute="bottom" constant="65" id="4bl-ll-ERz"/>
@@ -144,7 +147,6 @@
                             <constraint firstItem="NBn-wB-IxA" firstAttribute="leading" secondItem="OWD-ga-Ni4" secondAttribute="leading" id="tKi-mn-uZ4"/>
                             <constraint firstItem="Fn8-fx-wlR" firstAttribute="top" secondItem="3zf-Fo-x1L" secondAttribute="bottom" constant="71" id="z5e-nu-Eur"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5Tt-f2-Bkr"/>
                     </view>
                     <connections>
                         <outlet property="createAccountButton" destination="yRe-Aw-Auq" id="UdC-eW-vml"/>
@@ -170,8 +172,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fnu-Ih-ud4"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="dejaView" destination="a6t-Pq-NpV" id="xYv-PV-r5k"/>
@@ -188,8 +190,8 @@
                     <view key="view" contentMode="scaleToFill" id="bbT-Sv-JKm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pc5-2K-keX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxa-9e-5be" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -260,8 +262,8 @@
                                 </connections>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JJK-im-PTn"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="pB5-a5-j3k" id="3YR-RO-njQ"/>
@@ -301,6 +303,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="skb-KO-oQp"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="skb-KO-oQp" firstAttribute="trailing" secondItem="xne-x3-3U0" secondAttribute="trailing" constant="6" id="5SF-A8-T0c"/>
@@ -308,7 +311,6 @@
                             <constraint firstItem="skb-KO-oQp" firstAttribute="bottom" secondItem="xne-x3-3U0" secondAttribute="bottom" id="R50-59-Zam"/>
                             <constraint firstItem="xne-x3-3U0" firstAttribute="top" secondItem="skb-KO-oQp" secondAttribute="top" id="bFO-gk-eXs"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="skb-KO-oQp"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="xne-x3-3U0" id="HU2-pN-xwW"/>
@@ -367,7 +369,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="h6S-wC-hpo" customClass="UICollectionViewcell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoGroupCel" id="h6S-wC-hpo" customClass="UICollectionViewcell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -389,5 +391,8 @@
     </scenes>
     <resources>
         <image name="FotosCloud" width="418" height="202"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

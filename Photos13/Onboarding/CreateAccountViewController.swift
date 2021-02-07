@@ -17,7 +17,6 @@ final class CreateAccountViewController: UIViewController, UITextFieldDelegate, 
     private var userName = ""
     private var password = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -19,13 +19,12 @@ private extension Selector {
 
 final class ViewController: RootViewController, Storyboarded {
     @IBOutlet weak var dejaView: UIView!
-    private var digestView: UIView!
+    private var digestView = UIView()
     private var dejaVu: DejaViewController!
-    private var dejaVuLabel: UILabel!
-    private var cameraRollTitle: UILabel!
+    private var dejaVuLabel = UILabel()
     private var cameraRoll: PhotosCollectionViewController!
     private var digest: DigestViewController!
-    private var digestTitle: UILabel!
+    private var digestTitle = UILabel()
     private var safeArea = UIEdgeInsets()
     private var labelFont: UIFont!
 
@@ -43,7 +42,6 @@ final class ViewController: RootViewController, Storyboarded {
         self.view.backgroundColor = backgroundColor
         self.title = "Fotos 13"
 
-        self.dejaVuLabel = UILabel(frame: CGRect.zero)
         self.dejaVuLabel.textColor = textColor
         let localFont =  UIFont(name: "HelveticaNeue", size: 14.0)!
         self.labelFont = UIFontMetrics(forTextStyle: .title2).scaledFont(for: localFont)
@@ -72,9 +70,7 @@ final class ViewController: RootViewController, Storyboarded {
     }
 
     private func loadDigest() {
-        self.digestView = UIView(frame: CGRect.zero)
         self.view.addSubview(self.digestView)
-        self.digestTitle = UILabel(frame: CGRect.zero)
         self.digestTitle.textColor = textColor
         self.digestTitle.font = self.labelFont
         self.digestTitle.text = "Digest ..."
